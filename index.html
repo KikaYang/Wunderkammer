@@ -15,10 +15,9 @@
 }
 .screenFade{
   position:fixed;inset:0;background:#000;
-  opacity:0;animation:fadeToBlack 11s forwards;
-  pointer-events:none;z-index:9997;
+  opacity: 0; animation: fadeToBlack var(--fade-duration, 11s) forwards;
+  pointer-events: none; z-index: 9997;
 }
-
 
 @keyframes fadeIn{
   from{opacity:0;} to{opacity:1;}
@@ -46,7 +45,32 @@
   max-width:90vw;font-size:1.2em;line-height:1.4;
   opacity:0;animation:fadeIn 1s 4.5s forwards; 
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryFormat 3.3.9   &lt;!-- Harlowe 3.x --&gt;" tags="" position="25,25" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="StoryStylesheet" tags="" position="150,25" size="100,100">@keyframes fadeToBlack{
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+.fadeInLn {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-delay: var(--delay, 0s);
+  animation-fill-mode: forwards;
+  font-size: 1.2em;          
+  margin: 0.2em 0;        
+  text-align: center;
+}
+
+body      { background: #000; color: #eee; }
+tw-passage{ background: transparent; }
+
+#epilogue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  margin: 0;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryFormat 3.3.9   &lt;!-- Harlowe 3.x --&gt;" tags="" position="25,25" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="StoryStylesheet" tags="" position="150,25" size="100,100">@keyframes fadeToBlack{
   from{opacity:0;} to{opacity:1;}
 }
 .screenFade{
@@ -284,7 +308,11 @@ In the fading light, you spot a lone figure kneeling at the edge of the sluice�
 [[How do you bury people these days?|Burial]]  
 [[Who pays for burials?|Pay]]  
 [[Aren’t you afraid?|Fear]]
-[[Thank him and move on.|Thank]]</tw-passagedata><tw-passagedata pid="15" name="Doctor" tags="" position="687.5,975" size="100,100"></tw-passagedata><tw-passagedata pid="16" name="Grada" tags="" position="250,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_aaeaf1838f0f4bc99081ac33bac6bd63~mv2.png&quot;
+[[Thank him and move on.|Thank]]</tw-passagedata><tw-passagedata pid="15" name="Doctor" tags="" position="900,1025" size="100,100">&#39;&#39;Just outside the ruins of a scorched alley near Via Castiglione&#39;&#39;
+
+Spada steps away from the gravedigger, his boots still dusted with lime. He follows the choking stench of vinegar and pitch until he sees a man in a waxed white coat hunched over a basin of smoking liquid. The figure coughs violently, then straightens with effort, revealing blistered skin beneath the edge of his soaked hood.
+
+[[Next|Recognize]]</tw-passagedata><tw-passagedata pid="16" name="Grada" tags="" position="250,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_aaeaf1838f0f4bc99081ac33bac6bd63~mv2.png&quot;
      style=&quot;
        display: block;
        margin: 0 auto 1em;
@@ -332,7 +360,7 @@ In the fading light, you spot a lone figure kneeling at the edge of the sluice�
 
 **PAOLO:** “Fear’s wasted. We’ve lost twenty-three men in July and August alone—me breathing lime and rot all day. The air here tastes of decay and quicklime; that’s your sign that Meloncello’s not just a place name but ten thousand souls crying out from the dirt.”  
 
-[[Back|Gravedigger]]</tw-passagedata><tw-passagedata pid="20" name="Thank" tags="" position="925,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_0a9c16f079894c4da31b62ef880d12fd~mv2.png&quot;
+[[Back|Gravedigger]]</tw-passagedata><tw-passagedata pid="20" name="Thank" tags="" position="775,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_0a9c16f079894c4da31b62ef880d12fd~mv2.png&quot;
      style=&quot;
        display: block;
        margin: 0 auto 1em;
@@ -346,7 +374,89 @@ In the fading light, you spot a lone figure kneeling at the edge of the sluice�
 
 [[Continue|Chapter1]]
 
-&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_7c9698d30e834138a79f3d4b2f4c5df8.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata></tw-storydata>
+&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_7c9698d30e834138a79f3d4b2f4c5df8.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="21" name="Recognize" tags="" position="950,1250" size="100,100">**SPADA:**  
+Brother Zazio?
+
+**ZAZIO (hoarse):**  
+Your Eminence. Didn&#39;t expect to see you out here... in hell.
+
+**SPADA:**  
+They say you&#39;re leading the purgatori. Sixty men, is that true?
+
+**ZAZIO:**  
+More or less. Laymen and Camillian friars. Most of them still breathing—though barely. Two more collapsed yesterday. Resin fumes, I think. Ate through their lungs like fire through paper.
+
+[[Next|Situation]]</tw-passagedata><tw-passagedata pid="22" name="Situation" tags="" position="900,1425" size="100,100">**SPADA (grimacing):**  
+God have mercy. And the work?
+
+**ZAZIO:**  
+Relentless. First we mark the dead houses with the red cross—⸸. Some streets are sealed off entirely. We scrape walls down to brick, douse them with lime-water. Beds, clothes—burnt in the open. If it smells foul, we torch it. Even the letters are washed in zinc before a courier touches them.
+
+**SPADA:**  
+And the cost?
+
+**ZAZIO (dry laugh):**  
+Ask the Senate. They say we’re draining the treasury—200 lire a day. They&#39;d rather fund grain subsidies than stop the plague. But you should see the nobles—paying off officials to keep their doors unmarked while servants rot inside.
+
+[[Next|Helpless]]</tw-passagedata><tw-passagedata pid="23" name="Helpless" tags="" position="900,1550" size="100,100">**SPADA:**  
+And the people?
+
+**ZAZIO (bitter):**  
+They call us ghouls. Throw stones at us. Some priests even say we&#39;re going against God&#39;s will, interfering with divine punishment. But we—  
+*(pauses, wiping his eyes)*  
+We do this because no one else will. This is our martyrdom. Of the sixty men, nine friars are dead. And I—  
+*(he blinks rapidly)*  
+The lime burned my eyes last week. I can&#39;t see properly anymore. Still, I lead them. I must.
+
+**SPADA (softly):**  
+You shouldn&#39;t be out here.
+
+**ZAZIO:**  
+If I stop now, they stop. And the city dies faster. We’ve cleaned over three thousand houses. We boil our gloves in pitch after every visit. Still, the stench sticks. It’s in our lungs. Our clothes. Our prayers.
+
+[[Next|Duty]]</tw-passagedata><tw-passagedata pid="24" name="Duty" tags="" position="900,1675" size="100,100">**SPADA:**  
+Tell me what you need.
+
+**ZAZIO (after a pause):**  
+Not money. Not thanks. Just let us finish the job. Don’t let the Senate cancel the next round. Let us go to the slums too—not just the homes that pay.
+
+**SPADA:**  
+You have my word. And may God grant you strength.
+
+**ZAZIO (quietly):**  
+We burn everything except hope.
+
+[[Next|The End]]</tw-passagedata><tw-passagedata pid="25" name="The End" tags="" position="900,1800" size="100,100">(hook: &quot;overlay&quot;)[]
+
+Spada stands atop the Asinelli Tower at dawn. Below, Bologna stirs: market carts return, children chase rats, lime-scarred purgatori shuffle home. He opens a ledger—page after page of the dead—then tears it out, letting wind scatter the names over the rooftops.
+
+**SPADA:**  
+&quot;We built lazarettos to contain the sick, and walls to contain the truth. But the dead needed no containment. They were Bologna’s silent witnesses. Let them speak now.&quot;
+
+(link: &quot;Next&quot;)[
+  (append: ?overlay)[&lt;div class=&quot;screenFade&quot; style=&quot;--fade-duration:1s;&quot;&gt;&lt;/div&gt;]
+  (live: 1s)[
+    (goto: &quot;Epilogue&quot;)
+    (stop:)
+  ]
+]</tw-passagedata><tw-passagedata pid="26" name="Epilogue" tags="" position="1125,1825" size="100,100">
+&lt;div id=&quot;epilogue&quot;&gt;
+  &lt;p class=&quot;fadeInLn&quot; style=&quot;--delay:2.5s&quot;&gt;
+    Bologna lost 15,000 souls in 1630.
+  &lt;/p&gt;
+  &lt;p class=&quot;fadeInLn&quot; style=&quot;--delay:5s&quot;&gt;
+    But no ledger recorded the true cost:
+  &lt;/p&gt;
+  &lt;p class=&quot;fadeInLn&quot; style=&quot;--delay:7.5s&quot;&gt;
+    The blindness of those who chose to see nothing.
+  &lt;/p&gt;
+  &lt;p class=&quot;fadeInLn&quot; style=&quot;--delay:10s&quot;&gt;
+    The silence of those who chose to say nothing.
+  &lt;/p&gt;
+  &lt;p class=&quot;fadeInLn&quot; style=&quot;--delay:12.5s&quot;&gt;
+    (link: &quot;Thank you for playing&quot;)[(goto: &quot;Start&quot;)]
+  &lt;/p&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
