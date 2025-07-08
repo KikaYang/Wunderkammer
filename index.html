@@ -84,7 +84,8 @@ tw-passage{ background: transparent; }
   transform:translate(-50%,-50%);
   font-size:4em;font-weight:bold;color:#c00;
   text-align:center;
-}</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="275,25" size="100,100">(set: $failCount to 0)</tw-passagedata><tw-passagedata pid="4" name="Start" tags="" position="400,25" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_69192752d7af43d7ac86aa4f5eb7032c~mv2.png&quot;
+}</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="275,25" size="100,100">(set: $failCount to 0)
+(set: $thanks to 0)</tw-passagedata><tw-passagedata pid="4" name="Start" tags="" position="400,25" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_69192752d7af43d7ac86aa4f5eb7032c~mv2.png&quot;
      style=&quot;
        display: block;
        margin: 0 auto 1em;
@@ -217,8 +218,8 @@ Wax dripped from spent candles dots the cobblestones, and a single lute with sna
 
 Cardinal-legate Spada steps down from his litter into this smoky, sorrowful scene. Soldiers and purgatori move like ghosts between straw pyres—iron baskets of burning pitch glowing in the dusk—tapping lime-caked canes on doors sealed with wax and red crosses. Families are trapped inside: one man vomits into the gutter; another helper’s tears stain a fresco of the Virgin.  
 
-[[Go to the Gravedigger|Gravedigger]]  
-[[Go to the Doctor’s Lazaret|Doctor]]
+[[Go to the Grave|Gravedigger]]  
+(if: $thanks &gt;= 1)[[[Go to the alley|Doctor]]]
 
 &lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_02b6df3f9f484ce7bff9d36644d82aa7.mp3&quot; autoplay&gt;&lt;/audio&gt;
 
@@ -308,11 +309,21 @@ In the fading light, you spot a lone figure kneeling at the edge of the sluice�
 [[How do you bury people these days?|Burial]]  
 [[Who pays for burials?|Pay]]  
 [[Aren’t you afraid?|Fear]]
-[[Thank him and move on.|Thank]]</tw-passagedata><tw-passagedata pid="15" name="Doctor" tags="" position="900,1025" size="100,100">&#39;&#39;Just outside the ruins of a scorched alley near Via Castiglione&#39;&#39;
+[[Thank him and move on.|Thank]]</tw-passagedata><tw-passagedata pid="15" name="Doctor" tags="" position="900,1025" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_4c30f7d74ef644d6a50aaef1d2fabc09~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
+
+&#39;&#39;Just outside the ruins of a scorched alley near Via Castiglione&#39;&#39;
 
 Spada steps away from the gravedigger, his boots still dusted with lime. He follows the choking stench of vinegar and pitch until he sees a man in a waxed white coat hunched over a basin of smoking liquid. The figure coughs violently, then straightens with effort, revealing blistered skin beneath the edge of his soaked hood.
 
-[[Next|Recognize]]</tw-passagedata><tw-passagedata pid="16" name="Grada" tags="" position="250,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_aaeaf1838f0f4bc99081ac33bac6bd63~mv2.png&quot;
+[[Next|Recognize]]
+
+&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_a67fd078a4084225b0a9e8b7c104a94a.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="16" name="Grada" tags="" position="250,1225" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_aaeaf1838f0f4bc99081ac33bac6bd63~mv2.png&quot;
      style=&quot;
        display: block;
        margin: 0 auto 1em;
@@ -374,7 +385,17 @@ Spada steps away from the gravedigger, his boots still dusted with lime. He foll
 
 [[Continue|Chapter1]]
 
-&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_7c9698d30e834138a79f3d4b2f4c5df8.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="21" name="Recognize" tags="" position="950,1250" size="100,100">**SPADA:**  
+&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_7c9698d30e834138a79f3d4b2f4c5df8.mp3&quot; autoplay&gt;&lt;/audio&gt;
+
+(set: $thanks to $thanks + 1)</tw-passagedata><tw-passagedata pid="21" name="Recognize" tags="" position="950,1250" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_3c1f9cd8a7d14aa7a36d7cc5199e79e7~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
+
+**SPADA:**  
 Brother Zazio?
 
 **ZAZIO (hoarse):**  
@@ -386,11 +407,19 @@ They say you&#39;re leading the purgatori. Sixty men, is that true?
 **ZAZIO:**  
 More or less. Laymen and Camillian friars. Most of them still breathing—though barely. Two more collapsed yesterday. Resin fumes, I think. Ate through their lungs like fire through paper.
 
-[[Next|Situation]]</tw-passagedata><tw-passagedata pid="22" name="Situation" tags="" position="900,1425" size="100,100">**SPADA (grimacing):**  
+[[Next|Situation]]</tw-passagedata><tw-passagedata pid="22" name="Situation" tags="" position="900,1425" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_c15caa6dab4a45fbb674c2006663e796~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
+
+**SPADA (grimacing):**  
 God have mercy. And the work?
 
 **ZAZIO:**  
-Relentless. First we mark the dead houses with the red cross—⸸. Some streets are sealed off entirely. We scrape walls down to brick, douse them with lime-water. Beds, clothes—burnt in the open. If it smells foul, we torch it. Even the letters are washed in zinc before a courier touches them.
+Relentless. First we mark the dead houses with the red cross. Some streets are sealed off entirely. We scrape walls down to brick, douse them with lime-water. Beds, clothes—burnt in the open. If it smells foul, we torch it. Even the letters are washed in zinc before a courier touches them.
 
 **SPADA:**  
 And the cost?
@@ -398,7 +427,18 @@ And the cost?
 **ZAZIO (dry laugh):**  
 Ask the Senate. They say we’re draining the treasury—200 lire a day. They&#39;d rather fund grain subsidies than stop the plague. But you should see the nobles—paying off officials to keep their doors unmarked while servants rot inside.
 
-[[Next|Helpless]]</tw-passagedata><tw-passagedata pid="23" name="Helpless" tags="" position="900,1550" size="100,100">**SPADA:**  
+[[Next|Helpless]]
+
+&lt;audio src=&quot;https://static.wixstatic.com/mp3/d94946_a1a701de882f4423985d6078bb9f02be.mp3&quot; autoplay&gt;&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="23" name="Helpless" tags="" position="900,1550" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_dd1310e2c91246dfa5921c222a1fb409~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
+
+**SPADA:**  
 And the people?
 
 **ZAZIO (bitter):**  
@@ -414,7 +454,15 @@ You shouldn&#39;t be out here.
 **ZAZIO:**  
 If I stop now, they stop. And the city dies faster. We’ve cleaned over three thousand houses. We boil our gloves in pitch after every visit. Still, the stench sticks. It’s in our lungs. Our clothes. Our prayers.
 
-[[Next|Duty]]</tw-passagedata><tw-passagedata pid="24" name="Duty" tags="" position="900,1675" size="100,100">**SPADA:**  
+[[Next|Duty]]</tw-passagedata><tw-passagedata pid="24" name="Duty" tags="" position="900,1675" size="100,100">&lt;img src=&quot;https://static.wixstatic.com/media/d94946_6d56c193c99245daa468a2e446987779~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
+
+**SPADA:**  
 Tell me what you need.
 
 **ZAZIO (after a pause):**  
@@ -427,6 +475,14 @@ You have my word. And may God grant you strength.
 We burn everything except hope.
 
 [[Next|The End]]</tw-passagedata><tw-passagedata pid="25" name="The End" tags="" position="900,1800" size="100,100">(hook: &quot;overlay&quot;)[]
+
+&lt;img src=&quot;https://static.wixstatic.com/media/d94946_5a4fca0f5acd49feb91695b3d49d850d~mv2.png&quot;
+     style=&quot;
+       display: block;
+       margin: 0 auto 1em;
+       max-width: 70%;
+       height: auto;
+     &quot; alt=&quot;Reveal&quot;&gt;
 
 Spada stands atop the Asinelli Tower at dawn. Below, Bologna stirs: market carts return, children chase rats, lime-scarred purgatori shuffle home. He opens a ledger—page after page of the dead—then tears it out, letting wind scatter the names over the rooftops.
 
